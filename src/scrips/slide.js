@@ -115,6 +115,8 @@ function load() {
   start();
 }
 
+let indexLi = 0;
+
 function start() {
   var totalItemsWidth = 0;
   for (let i = 0; i < allBox.length; i++) {
@@ -139,12 +141,18 @@ function start() {
     li.innerHTML = i;
     li.setAttribute("onclick", "controlSlides(this)");
     ul.appendChild(li);
+    indexLi++;
     if (i == 1) {
       li.className = "active";
     }
   }
   controls.appendChild(ul);
+
+
+  
 }
+
+
 
 // when click on numbers slide to next slide
 function controlSlides(ele) {
@@ -173,3 +181,23 @@ function controlSlides(ele) {
 }
 
 window.onload = load();
+
+setTimeout(() => {
+  let ul = document.querySelector(".thumbnail-slider .content ul");
+  console.log({ ul });
+  console.log({ indexLi });
+
+
+  let liClicked = 0;
+
+  setInterval(() => {
+    ul.children[liClicked].click();
+    liClicked++;
+    if (liClicked == indexLi) {
+      liClicked = 0;
+    }
+  }, 7000);
+
+
+}, 3000);
+
