@@ -1,12 +1,12 @@
 const carrito = document.getElementById('carrito');
-const elementos1 = document.getElementById('lista-1');
+// const elementos1 = document.getElementById('lista-1');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventListeners();
 
 function cargarEventListeners(){
-    elementos1.addEventListener('clic', comprarElemento);
+    // elementos1.addEventListener('clic', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
@@ -66,5 +66,57 @@ function vaciarCarrito(){
     return false;
 }
 
+// Agregar Favoritos
 
+let btnFavorito = document.querySelectorAll(".productos-container .producto .producto-info .info-container a");
+console.log({btnFavorito});
+
+for (let i = 0; i < btnFavorito.length; i++) {
+    btnFavorito[i].addEventListener("click", function(e){
+        e.preventDefault();
+        let producto = e.target.parentElement.parentElement.parentElement;
+        localStorage.setItem("producto", producto.outerHTML);
+    });
+}
+
+const getRemineTime = deadline => {
+    let now = new Date(),
+        retime = (new Date(deadline) - now + 1000) / 1000,
+        segundos = ('0' + Math.floor(retime % 60)).slice(-2),
+        minutos = ('0' + Math.floor(retime / 60 % 60)).slice(-2),
+        horas = ('0' + Math.floor(retime / 3600 % 24)).slice(-2),
+        dias = Math.floor(retime / (3600 * 24));
+
+    return {
+        retime,
+        segundos,
+        minutos,
+        horas,
+        dias
+    }
+}
+
+const conteo = document.getElementById('conteo');
+
+setInterval(() => {
+    const time = getRemineTime('Nov 15 2023 00:00:00 GMT-0300');
+    conteo.innerHTML = `${time.dias} d ${time.horas} h ${time.minutos} m ${time.segundos} s.`;
+}, 1000);
+
+const submenu = document.querySelector('.submenu');
+const star = document.querySelector('.submenu i');
+submenu.addEventListener('click', function(){
+    this.classList.toggle('active');
+    star.classList.toggle("fa-circle-xmark");
+    carrito.classList.toggle('active');
+    
+
+    carrito.animate([
+        {transform: 'translateY(-120px)', transform: 'translateX(-120px)', opacity: 0},
+        {transform: 'translateY(0)', transform: 'translateX(0)', opacity: 1}
+    ], {
+        duration: 400,
+        iterations: 1
+    });
+});
 

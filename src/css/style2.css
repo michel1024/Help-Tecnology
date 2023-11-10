@@ -34,6 +34,7 @@ img{
     background-color: #ffffff;
     padding: 70px 0;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .menu{
@@ -44,6 +45,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 80px;
 }
 
 .logo{
@@ -55,8 +57,9 @@ img{
 }
 
 .logo img{
-    width: 220px;
-    height: 200px;
+    /* width: 220px;
+    height: 200px; */
+    width: 50%;
 }
 
 .menu .navbar ul li{
@@ -85,23 +88,46 @@ img{
 }
 
 .submenu{
-    position: relative;
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.submenu i{
+    background-color: #d8ca0b;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 11px;
 }
 
 .submenu #carrito{
     display: none;
+    position: absolute;
+    left: -200px;
+    top: 100px;
+    width: 30%;
+    background-color: rgba(199, 199, 199, 0.9);
+    padding: 20px;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.submenu #carrito.active{
+    /* transition: transform 0.5s ease-in-out; */
+    left: 0;
+    width: 100%;
+    display: block;
 }
 
 .submenu:hover #carrito{
-    display: block;
-    position: absolute;
+    /* display: inline-block; */
+    /* position: absolute;
     right: 0;
     backdrop-filter: blur(10px);
     top: 100%;
     z-index: 1;
-    background-color: #4e485076;
+    background-color: rgb(199, 199, 199);
     padding: 20px;
-    min-width: 400px;
+    min-width: 400px; */
 }
 
 table{
@@ -199,14 +225,14 @@ th, td{
     margin-bottom: 15px;
 }
 
-.btn-2{
+/* .btn-2{
     display: inline-block;
     padding: 7px 10px;
     background-color: #111111;
     color: white;
     border-radius: 5px;
     font-size: 15px;
-}
+} */
 
 .products{
     padding: 50px 0;
@@ -373,9 +399,9 @@ th, td{
         display: none;
     }
 
-    .submenu:hover #carrito{
-        min-width: 100%;
-    }
+    /* .submenu:hover #carrito{
+        min-width: -100%;
+    } */
 
     .header{
         min-height: 0vh;
@@ -461,20 +487,37 @@ th, td{
     justify-content: space-around;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-top: 200px;
+    margin-top: 200px !important;
+    max-width: 75%;
+    margin: auto;
 }
 
-.productos-container .producto{
+#carrito .producto{
+    background-color: #ffffff;
+    width: 250px;
+}
+
+#carrito .info-container{
+    display: none;
+}
+
+#carrito .producto .bg-img{
+    width: 250px;
+    height: 130px;
+}
+
+.producto{
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
     padding-bottom: 10px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.productos-container .producto .bg{
+.producto .bg{
     overflow: hidden;
 }
 
-.productos-container .producto .bg-img{
+.producto .bg-img{
     width: 370px;
     height: 250px;
     background-size: cover;
@@ -485,93 +528,93 @@ th, td{
     transition: all 0.8s ease-in-out;
 }
 
-.productos-container .producto.p1 .bg-img{
+.producto.p1 .bg-img{
     background-image: url(../img/pc/1.jpg);
 }
 
-.productos-container .producto.p2 .bg-img{
+.producto.p2 .bg-img{
     background-image: url(../img/productos/teclado1.webp);
 }
 
-.productos-container .producto.p3 .bg-img{
+.producto.p3 .bg-img{
     background-image: url(../img/productos/audifono1.jpg);
 }
 
-.productos-container .producto.p4 .bg-img{
+.producto.p4 .bg-img{
     background-image: url(../img/productos/laptop1.webp);
 }
 
-.productos-container .producto.p5 .bg-img{
+.producto.p5 .bg-img{
     background-image: url(../img/productos/mouse1.jpg);
 }
 
-.productos-container .producto.p6 .bg-img{
+.producto.p6 .bg-img{
     background-image: url(../img/productos/silla1.jpeg);
 }
 
-.productos-container .producto.p7 .bg-img{
+.producto.p7 .bg-img{
     background-image: url(../img/productos/torre1.webp);
 }
 
-.productos-container .producto.p8 .bg-img{
+.producto.p8 .bg-img{
     background-image: url(../img/productos/targeta1.webp);
 }
 
-.productos-container .producto.p9 .bg-img{
+.producto.p9 .bg-img{
     background-image: url(../img/productos/procesador1.webp);
 }
 
 
 
-.productos-container .producto.p1 .bg-img:hover{
+.producto.p1 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/pc/2.jpg);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p2 .bg-img:hover{
+.producto.p2 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/teclado2.png);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p3 .bg-img:hover{
+.producto.p3 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/audifono2.jpg);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p4 .bg-img:hover{
+.producto.p4 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/laptop2.webp);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p5 .bg-img:hover{
+.producto.p5 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/mouse2.jpg);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p6 .bg-img:hover{
+.producto.p6 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/silla2.jpg);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p7 .bg-img:hover{
+.producto.p7 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/torre2.webp);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p8 .bg-img:hover{
+.producto.p8 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/tarjeta2.png);
     transform: scale(1.1);
 }
 
-.productos-container .producto.p9 .bg-img:hover{
+.producto.p9 .bg-img:hover{
     transition: all 0.8s ease-in-out;
     background-image: url(../img/productos/procesador2.webp);
     transform: scale(1.1);
@@ -581,7 +624,7 @@ th, td{
 
 
 
-.productos-container .producto .descuento{
+.producto .descuento{
     z-index: 5;
     position: absolute;
     display: flex;
@@ -598,14 +641,14 @@ th, td{
     margin-left: 10px;
 }
 
-.productos-container .producto .producto-info h3{
+.producto .producto-info h3{
     text-align: center;
     margin-top: 12px;
     font-weight: 500;
     font-size: 22px;
 }
 
-.productos-container .producto .producto-info a{
+.producto .producto-info a{
     text-decoration: none;
     background-color: #00ACEE;
     color: white;
@@ -615,13 +658,13 @@ th, td{
     transition: all 0.3s ease-in-out;
 }
 
-.productos-container .producto .producto-info a:hover{
+.producto .producto-info a:hover{
     background-color: #d8ca0b;
     color: black;
     transition: all 0.3s ease-in-out;
 }
 
-.productos-container .producto .producto-info .info-container{
+.producto .producto-info .info-container{
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -630,16 +673,49 @@ th, td{
     
 }
 
-.productos-container .producto .producto-info .info-container p{
+.producto .producto-info .info-container p{
     color: rgb(136, 136, 136);
     font-style: italic;
     font-size: 15px;
 }
 
-.productos-container .producto .producto-info .precio{
+.producto .producto-info .precio{
     color: #0d68df;
     font-weight: 500;
     font-size: 20px;
     text-align: center;
     margin-top: 7px;
+}
+
+
+/* @media (min-width: 1200px) {
+    .productos-container{
+        max-width: 75%;
+    }
+} */
+
+
+
+.promociones{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding: 18px 0px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: rgb(0,11,83);
+    background: linear-gradient(90deg, rgba(0,11,83,1) 36%, rgba(7,115,185,1) 59%, rgba(9,137,209,1) 84%, rgba(0,255,102,1) 100%);
+}
+
+.promociones i{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.promociones span{
+    font-weight: 600;
+    font-size: 24px !important;
+    font-family: Arial, Helvetica, sans-serif;
 }

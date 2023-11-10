@@ -89,7 +89,7 @@
   animation-delay: 1.2s;
 }
 
-.home .caption a {
+.home .caption a, .btn-2 {
   display: inline-block;
   padding: 10px 30px;
   background-color: #00ACEE;
@@ -100,7 +100,7 @@
   transition: all 0.2s ease;
 }
 
-.home .caption a:hover{
+.home .caption a:hover, .btn-2:hover{
   background-color: #02a1e0;
 }
 

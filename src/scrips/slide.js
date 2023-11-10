@@ -196,8 +196,8 @@ setTimeout(() => {
     if (liClicked == indexLi) {
       liClicked = 0;
     }
-  }, 7000);
+  }, 5000);
 
 
-}, 3000);
+}, 2000);
 
