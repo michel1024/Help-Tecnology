@@ -13,9 +13,9 @@
     <div class="promociones">
         <p>Promoción Help Technology <i class="fa-solid fa-gift"></i> <span id="conteo"></span></p>
     </div>
-    <header class="header">
+    <!-- <header class="header"> -->
 
-        <div class="menu container">
+        <div class="menu container-menu">
             <a href="#" class="logo"><img src="../img/fondoB.jpg" alt="logo"></a>
             <input type="checkbox" id="menu" />
             <label for="menu">
@@ -33,12 +33,11 @@
             <div>
                 <ul>
                     <li class="submenu">
-                        <!-- <img src="../img/images/me-gusta.png" id="img-carrito" alt="carrito"> -->
-                        <i class="fa-regular fa-star"></i>
-                        <!-- <i class="fa-regular fa-circle-xmark"></i> -->
-                        <div style="z-index: 5;" id="carrito">
+                        <i id="star" style="padding: 25px;" class="fa-regular fa-star"></i>
+                        <div id="carrito">
+                            <div id="favoritos-content"></div>
 
-                            <div class="producto p1">
+                            <!-- <div class="producto p1">
                                 <div class="descuento">-40%</div>
                                 <div class="bg">
                                     <div class="bg-img">
@@ -53,8 +52,8 @@
                                     </div>
 
                                 </div>
-                            </div>
-                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar</a>
+                            </div> -->
+                            <a href="#" id="vaciar-carrito" class="btn-2"><i class="fa-solid fa-trash"></i>&nbsp; Vaciar</a>
                         </div>
                     </li>
                 </ul>
@@ -72,7 +71,7 @@
                 </div>
             </div> -->
 
-    </header>
+    <!-- </header> -->
 
     <!-- SLIDER -->
     <section class="home header-content container" id="home">
@@ -276,7 +275,7 @@
                 <h3>Producto 1</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -292,7 +291,7 @@
                 <h3>Teclado Mecánico</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -308,7 +307,7 @@
                 <h3>Diadema Gamer</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -324,7 +323,7 @@
                 <h3>Laptop MSI</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -340,7 +339,7 @@
                 <h3>Mouse Gamer con base de carga</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -356,7 +355,7 @@
                 <h3>Silla Gamer</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -372,7 +371,7 @@
                 <h3>Torre RGB Gamer</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -388,7 +387,7 @@
                 <h3>Tarjeta de Video</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -404,7 +403,7 @@
                 <h3>Procesador RYZEN</h3>
                 <p class="precio">$850.000</p>
                 <div class="info-container">
-                    <a href="#"><i class="fa-regular fa-star"></i> Favorito</a>
+                    <a class="btn-favorito" href="#"><i class="fa-regular fa-star"></i> Favorito</a>
                     <p>Premium</p>
                 </div>
 
@@ -655,5 +654,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../scrips/scrip.js"></script>
     <script src="../scrips/slide.js"></script>
+    <script src="../scrips/favorito.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ cargarEventListeners();
 function cargarEventListeners(){
     // elementos1.addEventListener('clic', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    // vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
 function comprarElemento(e){
@@ -59,12 +59,12 @@ function eliminarElemento(e){
     }
 }
 
-function vaciarCarrito(){
-    while (lista.firstChild){
-        lista.removeChild(lista.firstChild);
-    }
-    return false;
-}
+// function vaciarCarrito(){
+//     while (lista.firstChild){
+//         lista.removeChild(lista.firstChild);
+//     }
+//     return false;
+// }
 
 // Agregar Favoritos
 
@@ -103,20 +103,20 @@ setInterval(() => {
     conteo.innerHTML = `${time.dias} d ${time.horas} h ${time.minutos} m ${time.segundos} s.`;
 }, 1000);
 
-const submenu = document.querySelector('.submenu');
-const star = document.querySelector('.submenu i');
-submenu.addEventListener('click', function(){
-    this.classList.toggle('active');
-    star.classList.toggle("fa-circle-xmark");
-    carrito.classList.toggle('active');
+// const submenu = document.querySelector('.submenu');
+// const star = document.querySelector('.submenu i');
+// submenu.addEventListener('click', function(){
+//     this.classList.toggle('active');
+//     star.classList.toggle("fa-circle-xmark");
+//     carrito.classList.toggle('active');
     
 
-    carrito.animate([
-        {transform: 'translateY(-120px)', transform: 'translateX(-120px)', opacity: 0},
-        {transform: 'translateY(0)', transform: 'translateX(0)', opacity: 1}
-    ], {
-        duration: 400,
-        iterations: 1
-    });
-});
+//     carrito.animate([
+//         {transform: 'translateY(-30px)', opacity: 0},
+//         {transform: 'translateY(-20px)', opacity: 1}
+//     ], {
+//         duration: 600,
+//         iterations: 1
+//     });
+// });
 
