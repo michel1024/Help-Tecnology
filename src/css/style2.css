@@ -376,13 +376,62 @@ th, td{
 }
 
 .footer{
-    padding: 50px 0;
+    padding-top: 50px;
     background-color: #1f1c1c;
+    text-align: center;
+    color: white;
+    line-height: 2;
+}
+
+.footer h1{
+    color: white !important;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.footer .redes{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.footer p:first-child(){
+    padding-top: 20px;
+}
+
+.footer p{
+    font-size: 18px;
+}
+
+.footer .redes i{
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+}
+
+.footer .redes i:hover{
+    transform: rotate(20deg);
 }
 
 .footer-content{
     display: flex;
     justify-content: space-between;
+}
+
+.footer .copy{
+    border-top: 1px solid rgb(70, 70, 70);
+    margin-top: 25px;
+    padding: 15px 0px;
+}
+
+.footer .copy p{
+    font-size: 15px !important;
+    opacity: 0.8;
 }
 
 .link h3{
