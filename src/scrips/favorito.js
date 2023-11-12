@@ -31,7 +31,9 @@ const initFavoritos = () => {
         favoritosContent.innerHTML = favoritosTemplate;
     }else{
         btnVaciar.classList.add("hidden");
-        favoritosContent.innerHTML = "<span class='no-favoritos'>No tienes favoritos <i class='fa-regular fa-face-frown-open'></i></span>";
+        // favoritosContent.innerHTML = "<span class='no-favoritos'>No tienes favoritos <i class='fa-regular fa-face-frown-open'></i></span>";
+        favoritosContent.innerHTML = "<span class='no-favoritos'><i class='fa-solid fa-star'></i></span>";
+        favoritosContent.innerHTML += "<p class='vacio'>Vacío</p>";
     }
 }
 

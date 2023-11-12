@@ -80,6 +80,12 @@ img{
     color: #353535;
     display: block;
     font-weight: 300;
+    transition: all 0.2s ease;
+}
+
+.menu .navbar ul li a:hover{
+    color: #0d68df;
+    font-weight: 400;
 }
 
 #menu{
@@ -102,7 +108,7 @@ img{
 
 .submenu > i{
     /* background-color: #d8ca0b; */
-    font-size: 22px;
+    font-size: 25px;
     padding: 12px;
     border-radius: 11px;
     font-weight: 400;
@@ -371,7 +377,7 @@ th, td{
 
 .footer{
     padding: 50px 0;
-    background-color: #01aef0;
+    background-color: #1f1c1c;
 }
 
 .footer-content{
@@ -755,6 +761,118 @@ th, td{
 }
 
 span.no-favoritos{
-    text-align: center;
-    font-size: 22px;
+    font-size: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: rgb(240, 240, 240);
 }
+
+.vacio{
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+    margin-top: 20px;
+}
+
+/* span.no-favoritos i{
+    margin-left: 10px;
+} */
+
+.usuarios-title{
+    text-align: center;
+    margin-top: 130px;
+    /* margin-bottom: 20px; */
+    font-weight: 400;
+    font-size: 33px;
+}
+
+.usuarios-title::after{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #FFB600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bg-usuarios{
+    width: 100%;
+    background-color: #48a50a10;
+    padding: 20px;
+}
+
+.usuarios-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    /* background-color: #00abee21; */
+}
+
+.usuarios-container .usuario{
+    margin: 17px 0px;
+    cursor: pointer;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    background-color: rgb(245, 245, 245);
+    transition: all 0.3s ease;
+}
+
+.usuarios-container .usuario:hover{
+    box-shadow: 0 0 16px rgba(0,0,0,0.4);
+    background-color: rgb(250, 250, 250);
+}
+
+.usuarios-container .head{
+    margin-bottom: 13px;
+    display: flex;   
+    align-items: center;
+    gap: 20px;
+}
+
+.usuarios-container .head .nombre{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.usuarios-container .head .nombre i{
+    color: #00ACEE;
+    font-size: 17px;
+}
+
+.usuarios-container .head .stars{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.usuarios-container .head .stars i{
+    color: #FFB600;
+}
+
+.usuarios-container .body{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.usuarios-container .foot{
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.usuarios-container .foot .fecha{
+    float: right;
+    padding-top: 10px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+}
+
