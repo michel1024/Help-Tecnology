@@ -115,6 +115,18 @@ img{
     cursor: pointer;
 }
 
+.submenu > i > span{
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 1px 7px;
+    color: wheat;
+    text-align: center;
+    font-weight: bold;
+}
+
 .submenu #carrito{
     /* display: none; */
     position: absolute;
@@ -406,6 +418,10 @@ th, td{
 
 .footer p{
     font-size: 18px;
+}
+
+.footer .redes a{
+    color: white;
 }
 
 .footer .redes i{
@@ -743,6 +759,12 @@ th, td{
     transition: all 0.3s ease-in-out;
 }
 
+.producto .producto-info a.active{
+    background-color: #d8ca0b;
+    color: black;
+    pointer-events: none;
+}
+
 .producto .producto-info a:hover{
     background-color: #d8ca0b;
     color: black;
@@ -925,3 +947,29 @@ span.no-favoritos{
     font-size: 14px;
 }
 
+.btn-wapp{
+    position: fixed;
+    top: 75%;
+    width: 56px;
+    height: 56px;
+    color: white;
+    background-color: #2BB741;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 37px;
+    margin-left: 15px;
+    box-shadow: 0 6px 8px 2px rgba(0,0,0,.14);
+    z-index: 5;
+}
+
+.btn-wapp .text{
+    position: absolute;
+    font-size: 15px;
+    margin-left: 160px;
+    background-color: #eee;
+    color: black;
+    font-weight: 300;
+    padding: 15px 10px;
+}
