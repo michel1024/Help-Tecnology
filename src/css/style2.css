@@ -55,6 +55,10 @@ img{
     box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.3);
 }
 
+.menu.nosotros{
+    margin-top: 0 !important;
+}
+
 .logo{
     font-size: 25px;
     color: #111111;
@@ -118,10 +122,10 @@ img{
 .submenu > i > span{
     width: 25px;
     height: 25px;
-    font-size: 15px;
+    font-size: 13px;
     background-color: red;
     border-radius: 50%;
-    padding: 1px 7px;
+    padding: 2px 6px;
     color: wheat;
     text-align: center;
     font-weight: bold;
@@ -614,8 +618,115 @@ th, td{
     margin-bottom: 30px;
 }
 
+.productos-modal{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    /* margin-top: 200px !important;
+    max-width: 75%;
+    margin: auto; */
+}
+
+.productos-modal .producto.modal{
+    position: relative;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
+    padding-bottom: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    width: 650px;
+    /* height: 60vh; */
+    max-height: 95vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 11px;
+}
+
+.productos-modal .producto.modal .bg{
+    width: 400px;
+    margin: auto;
+}
+
+.productos-modal .producto.modal .bg .bg-img{
+    width: 400px;
+}
+
+.productos-modal .producto{
+    box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.productos-modal .producto .producto-info .info-container,
+.productos-modal .producto .descuento{
+    display: none;
+}
+
+.productos-modal .producto .descripcion{
+    display: block;
+    width: 95%;
+    margin: auto;
+    padding: 10px 15px;
+    border-radius: 11px;
+    box-shadow: -1px -1px 3px 3px rgba(133, 133, 133, 0.1);
+}
+
+.productos-modal .producto .descripcion p{
+    font-size: 16px;
+    color: rgb(83, 83, 83);
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+.productos-modal .producto .descripcion h3{
+    text-align: left;
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    padding-bottom: 4px;
+    border-bottom: 1px solid #0d68e096;
+}
+
+.productos-modal .producto .bg .bg-img{
+    margin: 0 auto !important;
+    cursor: default;
+}
+
+.productos-modal .producto .close{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    color: #3b3b3b;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.productos-modal .producto .close:hover{
+    color: #ca2424;
+}
+
+.hide{
+    display: none;
+}
+
 .producto .bg{
     overflow: hidden;
+}
+
+.producto .descripcion{
+    display: none;
 }
 
 .producto .bg-img{
@@ -760,13 +871,13 @@ th, td{
 }
 
 .producto .producto-info a.active{
-    background-color: #d8ca0b;
+    background-color: #FFB600;
     color: black;
     pointer-events: none;
 }
 
 .producto .producto-info a:hover{
-    background-color: #d8ca0b;
+    background-color: #FFB600;
     color: black;
     transition: all 0.3s ease-in-out;
 }
@@ -953,7 +1064,7 @@ span.no-favoritos{
     width: 56px;
     height: 56px;
     color: white;
-    background-color: #2BB741;
+    background-color: #25d366;;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -962,14 +1073,60 @@ span.no-favoritos{
     margin-left: 15px;
     box-shadow: 0 6px 8px 2px rgba(0,0,0,.14);
     z-index: 5;
+    transition: all 0.3s ease-out;
+}
+
+.btn-wapp:hover{
+    background-color: #2BB741;
 }
 
 .btn-wapp .text{
+    /* z-index: 1; */
+    /* opacity: 0; */
+    width: 120px;
     position: absolute;
     font-size: 15px;
-    margin-left: 160px;
-    background-color: #eee;
+    margin-left: 190px;
+    background-color: #fff;
     color: black;
     font-weight: 300;
-    padding: 15px 10px;
+    padding: 10px 10px;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 3px 5px 3px rgba(0,0,0,.2);
+    border-radius: 11px;
+}
+
+/* .btn-wapp:hover .text{
+    opacity: 1;
+    margin-left: 170px;
+} */
+
+.home .indicator{
+    display: none !important;
+}
+
+.nosotros h1,
+.nosotros h2,
+.nosotros h3{
+    /* font-family: Arial, Helvetica, sans-serif !important; */
+    font-weight: 500;
+    margin-top: 40px;
+    color: rgb(70, 69, 69) !important;
+}
+
+.nosotros p{
+    line-height: 1.5;
+    margin: 15px 0px;
+    color: rgb(92, 92, 92) !important;
+    /* font-family: Arial, Helvetica, sans-serif !important; */
+}
+
+.container.nosotros{
+    width: 40% !important;
+}
+
+@media (max-width: 1200px) {
+    .container.nosotros{
+        width: 70% !important;
+    }
 }

@@ -99,9 +99,31 @@ const getRemineTime = deadline => {
 const conteo = document.getElementById('conteo');
 
 setInterval(() => {
-    const time = getRemineTime('Nov 15 2023 00:00:00 GMT-0300');
+    const time = getRemineTime('12 10 2023 00:00:00 GMT-0300');
     conteo.innerHTML = `${time.dias} d ${time.horas} h ${time.minutos} m ${time.segundos} s.`;
 }, 1000);
+
+const productos = document.querySelectorAll('.productos-container .producto .bg');
+
+const productoModalContainer = document.getElementById('producto-modal-container');
+
+productos.forEach(producto => {
+    let prodEl = producto.parentElement;
+    producto.addEventListener('click', function(e){
+        e.preventDefault();
+        productoModalContainer.innerHTML = prodEl.outerHTML + '<span class="close" id="btn-close">x</span>';
+        document.getElementById('modal').classList.remove("hide");
+
+        const btnClose = document.getElementById('btn-close');
+        btnClose.addEventListener('click', function(){
+            document.getElementById('modal').classList.add("hide");
+        });
+    });
+});
+
+
+
+
 
 // const submenu = document.querySelector('.submenu');
 // const star = document.querySelector('.submenu i');
