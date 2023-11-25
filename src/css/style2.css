@@ -407,6 +407,11 @@ th, td{
     margin-bottom: 25px;
 }
 
+.footer i.label{
+    font-size: 16px;
+    opacity: 0.9;
+}
+
 .footer .redes{
     display: flex;
     justify-content: center;
@@ -599,7 +604,7 @@ th, td{
 
 #carrito .producto{
     background-color: #ffffff;
-    width: 250px;
+    width: 350px;
 }
 
 #carrito .info-container{
@@ -607,15 +612,16 @@ th, td{
 }
 
 #carrito .producto .bg-img{
-    width: 250px;
-    height: 130px;
+    width: 350px;
+    height: 330px;
 }
 
 .producto{
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
     padding-bottom: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 30px;
+    max-width: 400px;
 }
 
 .productos-modal{
@@ -639,12 +645,12 @@ th, td{
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
     padding-bottom: 10px;
     overflow: hidden;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     background-color: #ffffff;
     width: 650px;
     /* height: 60vh; */
     max-height: 95vh;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -656,6 +662,7 @@ th, td{
 .productos-modal .producto.modal .bg{
     width: 400px;
     margin: auto;
+    /* box-sizing: content-box !important; */
 }
 
 .productos-modal .producto.modal .bg .bg-img{
@@ -664,6 +671,9 @@ th, td{
 
 .productos-modal .producto{
     box-shadow: 0px 0px 0px 0px transparent;
+    max-width: 650px !important;
+    overflow: inherit;
+    margin-top: 25px;
 }
 
 .productos-modal .producto .producto-info .info-container,
@@ -702,8 +712,8 @@ th, td{
 
 .productos-modal .producto .close{
     position: absolute;
-    top: 5px;
-    right: 15px;
+    top: -8px;
+    right: 10px;
     font-size: 35px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 300;
@@ -730,8 +740,8 @@ th, td{
 }
 
 .producto .bg-img{
-    width: 370px;
-    height: 250px;
+    width: 400px;
+    height: 420px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -741,94 +751,174 @@ th, td{
 }
 
 .producto.p1 .bg-img{
-    background-image: url(../img/pc/1.jpg);
+    background-image: url(../img/productos/acer-aspire-1.jfif);
 }
 
 .producto.p2 .bg-img{
-    background-image: url(../img/productos/teclado1.webp);
+    background-image: url(../img/productos/compumax-1.jfif);
 }
 
 .producto.p3 .bg-img{
-    background-image: url(../img/productos/audifono1.jpg);
+    background-image: url(../img/productos/diadema-log-1.jfif);
 }
 
 .producto.p4 .bg-img{
-    background-image: url(../img/productos/laptop1.webp);
+    background-image: url(../img/productos/jbl-quantum-1.jfif);
 }
 
 .producto.p5 .bg-img{
-    background-image: url(../img/productos/mouse1.jpg);
+    background-image: url(../img/productos/kindle-1.jfif);
 }
 
 .producto.p6 .bg-img{
-    background-image: url(../img/productos/silla1.jpeg);
+    background-image: url(../img/productos/lenovo-idea-1.jfif);
 }
 
 .producto.p7 .bg-img{
-    background-image: url(../img/productos/torre1.webp);
+    background-image: url(../img/productos/mouse-log-1.jfif);
 }
 
 .producto.p8 .bg-img{
-    background-image: url(../img/productos/targeta1.webp);
+    background-image: url(../img/productos/mx-keys-1.jfif);
 }
 
 .producto.p9 .bg-img{
-    background-image: url(../img/productos/procesador1.webp);
+    background-image: url(../img/productos/spotlight-1.jfif);
+}
+
+.producto.p10 .bg-img{
+    background-image: url(../img/productos/jbl-charge-1.jfif);
+}
+
+.producto.p11 .bg-img{
+    background-image: url(../img/productos/jbl-xtreme-1.jfif);
+}
+
+.producto.p12 .bg-img{
+    background-image: url(../img/productos/combo-slim-1.jfif);
+}
+
+.producto.p13 .bg-img{
+    background-image: url(../img/productos/mouse-mx-1.jfif);
+}
+
+.producto.p14 .bg-img{
+    background-image: url(../img/productos/google-nest.jfif);
+}
+
+.producto.p15 .bg-img{
+    background-image: url(../img/productos/oraimo-1.jfif);
+}
+
+.producto.p16 .bg-img{
+    background-image: url(../img/productos/monitor-lenovo-1.jfif);
+}
+
+.producto.p17 .bg-img{
+    background-image: url(../img/productos/combo-logitech-1.jfif);
 }
 
 
 
 .producto.p1 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/pc/2.jpg);
+    background-image: url(../img/productos/acer-aspire-2.jpg);
     transform: scale(1.1);
 }
 
 .producto.p2 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/teclado2.png);
+    background-image: url(../img/productos/compumax-2.webp);
     transform: scale(1.1);
 }
 
 .producto.p3 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/audifono2.jpg);
+    background-image: url(../img/productos/diadema-log-2.webp);
     transform: scale(1.1);
 }
 
 .producto.p4 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/laptop2.webp);
+    background-image: url(../img/productos/jbl-quantum-2.jpg);
     transform: scale(1.1);
 }
 
 .producto.p5 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/mouse2.jpg);
+    background-image: url(../img/productos/kindl2-2.jpg);
     transform: scale(1.1);
 }
 
 .producto.p6 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/silla2.jpg);
+    background-image: url(../img/productos/lenovo-idea-2.jpg);
     transform: scale(1.1);
 }
 
 .producto.p7 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/torre2.webp);
+    background-image: url(../img/productos/mouse-log-2.webp);
     transform: scale(1.1);
 }
 
 .producto.p8 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/tarjeta2.png);
+    background-image: url(../img/productos/mx-keys-2.jpg);
     transform: scale(1.1);
 }
 
 .producto.p9 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/procesador2.webp);
+    background-image: url(../img/productos/spotlight-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p10 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/jbl-charge-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p11 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/jbl-xtreme-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p12 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/combo-slim-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p13 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/mouse-mx-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p14 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/google-nest-2.jpg);
+    transform: scale(1.1);
+}
+
+.producto.p15 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/oraimo-2.png);
+    transform: scale(1.1);
+}
+
+.producto.p16 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/monitor-lenovo-2.webp);
+    transform: scale(1.1);
+}
+
+.producto.p17 .bg-img:hover{
+    transition: all 0.8s ease-in-out;
+    background-image: url(../img/productos/combo-logitech-2.jpg);
     transform: scale(1.1);
 }
 
