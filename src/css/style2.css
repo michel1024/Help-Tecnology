@@ -741,9 +741,9 @@ th, td{
 
 .producto .bg-img{
     width: 400px;
-    height: 420px;
-    background-size: cover;
-    background-position: center;
+    height: 400px;
+    background-size: 100%;
+    background-position: top;
     background-repeat: no-repeat;
     border-radius: 5px;
     cursor: pointer;
@@ -912,7 +912,7 @@ th, td{
 
 .producto.p16 .bg-img:hover{
     transition: all 0.8s ease-in-out;
-    background-image: url(../img/productos/monitor-lenovo-2.webp);
+    background-image: url(../img/productos/monitor-lenovo-2.jpg);
     transform: scale(1.1);
 }
 
