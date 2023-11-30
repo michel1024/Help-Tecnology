@@ -121,6 +121,10 @@ productos.forEach(producto => {
     });
 });
 
+let anio = document.getElementById('anio');
+let fecha = new Date();
+anio.innerHTML = fecha.getFullYear();
+
 
 
 

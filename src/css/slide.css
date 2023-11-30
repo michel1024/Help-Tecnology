@@ -260,7 +260,7 @@
 .thumbnail-slider .item .img-container{
   height: 65%;
   width: 270px;
-
+  margin: auto;
 }
 .thumbnail-slider .item .img-caption{
   padding: 0px 10px;

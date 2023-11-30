@@ -27,10 +27,10 @@ img{
     margin: 0 auto;
 }
 
-.container-menu{
+/* .container-menu{
     width: 100%;
     margin: 0 auto;
-}
+} */
 
 .header{
     display: flex;
@@ -475,8 +475,61 @@ th, td{
 }
 
 @media (max-width: 991px) {
+
+    .nosotros-container{
+        flex-wrap: wrap;
+    }
+
+    .nosotros-container .img{
+        margin: auto;
+        width: 60% !important;
+    }
+
+    .nosotros-container .info{
+        width: 100% !important;
+    }
+
+    .home .caption{
+        margin-left: 80px !important;
+    }
+
+    .thumbnail-slider .item .img-container{
+        height: 75%;
+        width: 300px;
+        margin: auto;
+    }
+
+    .usuarios-container .usuario{
+        width: 90% !important;
+    }
+
+    #carrito{
+        width: 500px !important;
+        margin-top: -7px !important;
+    }
+
+    .container{
+        margin: auto;
+    }
+
+    .productos-container{
+        max-width: 100% !important;
+    }
+
+    .ul-icons{
+        /* float: right; */
+        right: 0;
+        margin-top: -50px;
+        position: absolute;
+    }
+
     .menu{
         padding: 20px;
+        display: block;
+        box-shadow: none;
+        border-bottom: 0;
+        background-color: transparent;
+        
     }
 
     .menu label{
@@ -484,16 +537,17 @@ th, td{
     }
 
     .menu .navbar{
-        position: absolute;
-        top: 100%;
+        /* position: absolute;
+        top: 100%; */
         left: 0;
         right: 0;
-        background-color: #181818;
+        background-color: black;
         display: none;
     }
 
     .menu .navbar ul li{
         width: 100%;
+        background-color: black;
     }
 
     .menu .navbar ul li a{
@@ -501,8 +555,12 @@ th, td{
     }
 
     #menu:checked ~ .navbar{
-        display: initial;
-
+        display: block;
+        z-index: 9;
+        height: 300px;
+        position: absolute;
+        margin-top: 15px;
+        /* height: 30vh !important; */
     }
 
     .logo{
@@ -672,7 +730,7 @@ th, td{
 .productos-modal .producto{
     box-shadow: 0px 0px 0px 0px transparent;
     max-width: 650px !important;
-    overflow: inherit;
+    /* overflow: inherit; */
     margin-top: 25px;
 }
 
@@ -1195,28 +1253,73 @@ span.no-favoritos{
     display: none !important;
 }
 
-.nosotros h1,
-.nosotros h2,
-.nosotros h3{
+.nosotros-container h1,
+.nosotros-container h2,
+.nosotros-container h3,
+.nosotros-container h4{
     /* font-family: Arial, Helvetica, sans-serif !important; */
     font-weight: 500;
     margin-top: 40px;
     color: rgb(70, 69, 69) !important;
 }
 
-.nosotros p{
+.nosotros-container p{
     line-height: 1.5;
     margin: 15px 0px;
     color: rgb(92, 92, 92) !important;
     /* font-family: Arial, Helvetica, sans-serif !important; */
 }
 
-.container.nosotros{
-    width: 40% !important;
+.nosotros-container{
+    width: 80% !important;
+    display: flex;
+    margin: auto;
+    gap: 50px;
+}
+
+.nosotros-container .info{
+    width: 60%;
+}
+
+.nosotros-container .img{
+    width: 45%;
+}
+
+.nosotros-container .img img{
+    width: 100%;
 }
 
 @media (max-width: 1200px) {
-    .container.nosotros{
+    .nosotros-container{
         width: 70% !important;
     }
+}
+
+
+.ul-icons{
+    display: flex;
+    align-items: baseline;
+}
+
+ul i.fa-user,
+ul i.fa-circle-user{
+    font-size: 25px;
+    font-weight: 400;
+    padding: 25px 15px;
+    color: black;
+}
+
+.nosotros-container li{
+    list-style: disc;
+}
+
+.descuento-producto{
+    background-color: #00c3fe;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+    
 }
